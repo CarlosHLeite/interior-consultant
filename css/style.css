@@ -1,0 +1,290 @@
+/*
+
+    font-family: 'Crimson Pro', serif;
+    font-family: 'Lora', serif;
+    font-family: 'Montserrat', sans-serif;
+
+*/
+
+*,
+*::after,
+*::before
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+}
+
+html
+{
+    font-size: 62.5%;
+}
+
+img
+{
+    max-width: 100%;
+}
+
+body
+{
+    height: 100vh;
+    background-color: #181719;
+    color: #fff;
+    font-family: 'Montserrat', sans-serif;
+    overflow-x: hidden;  
+}
+
+.wrap
+{
+    height: 100%;
+    position: relative;
+}
+
+.navigation
+{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 10vh;
+    padding: 10px;  
+}
+
+.nav
+{
+    position: absolute;
+    background-color: #181719;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    z-index: 100;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transform: translateX(100%); 
+    transition: transform 1s ease-in-out;
+     
+}
+
+.nav.active
+{
+    transform: translateX(0);
+}
+
+
+.nav ul li 
+{
+    position: relative;
+    list-style: none;
+    padding: 10px 0;
+    margin: 5px 0;
+    color: #fff;
+    text-align: center;
+    
+}
+
+.nav ul li a
+{
+    color: #fff; 
+    padding: 7px 0;
+    position: relative;
+    font-size: 18px;
+    font-weight: 700;
+    display: inline-block;
+    
+}
+
+.nav ul li a::before
+{
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 3px;
+    bottom: 0;
+    left: 0;
+    background-color: #fff;
+    transform: translatex(-100%) scaleX(0); 
+    transform-origin: right;
+    transition: transform .4s ease-in-out; 
+    text-align: center;
+    
+}
+
+.nav-item a:hover::before
+{
+    transform: translatex(0) scaleX(1);
+}
+
+
+
+.logo
+{
+    border: 1px solid #fff;
+    padding: 10px 20px;
+}
+
+.logo a
+{
+    font-family: 'Crimson Pro', serif;
+    font-weight: 200;
+    font-size: 14px;
+    line-height: 15px;
+    font-weight: 600;
+    text-transform: uppercase;
+    color: #fff;
+}
+
+.menu
+{
+    cursor: pointer;
+    z-index: 200;
+}
+
+.hero
+{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.hero-content
+{
+    max-width: 280px;
+}
+
+.hero-content h1
+{
+    font-family: 'Lora', serif;
+    font-size: 36px;
+    font-weight: 500;
+    margin: 20px 0;
+}
+
+.hero-content>p
+{
+    font-size: 14px;
+    font-weight: 500;
+    padding-right: 65px;
+    margin-bottom: 20px;
+}
+
+.hero-content a
+{
+    color: #fff;
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.hero-content .arrow
+{
+    font-weight: 900;
+    font-size: 16px;
+}
+
+.img{
+    z-index: 1;
+}
+
+.hero-img
+{
+    width: 280px;
+    height: 300px;
+    margin-top: 20px;
+    z-index: 1;
+}
+
+.user-information
+{
+    background-color:#181719;
+    -webkit-box-shadow: 0px 2px 7px 1px rgba(0,0,0,0.71); 
+    box-shadow: 0px 2px 7px 1px rgba(0,0,0,0.71);
+    width: 260px;
+    height: 150px;
+    margin: -50px auto 0;
+    padding: 20px 20px;
+    z-index: 10;
+    
+}
+
+.user-information h2
+{
+    font-family: 'Lora', serif;
+    font-size: 18px;
+    font-weight: 700;
+    margin-top: 10px;
+}
+
+.user-card img
+{
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    margin-right: 15px;
+}
+
+.user-card
+{
+    display: flex;
+    align-items: center;
+}
+
+.user-detail h3
+{
+    font-size: 12px;
+    font-weight: 500;
+    line-height: 14px;
+    
+}
+
+.user-detail p
+{
+    font-size: 10px;
+    font-weight: 500;
+    line-height: 12px;
+}
+
+footer
+{
+    font-size: 10px;
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    text-align: center;
+}
+
+@media (min-width: 1000px) {
+
+    .hero
+    {
+        height: 85vh;
+        flex-direction: row;
+        justify-content: center;
+        position: relative;
+    }
+
+    .user-information
+    {
+        position: absolute;
+        bottom: 50px;
+        right: 250px;
+    }
+
+    .hero-img {
+        width: 500px;
+        height: 400px;
+        
+    }
+
+    .hero-content
+    {
+        margin: 80px;
+    }
+    
+
+
+
+}
+
